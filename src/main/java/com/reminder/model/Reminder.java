@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 @Entity
-@Table
+@Table(name = "reminders")
 @Data
 @NoArgsConstructor
 public class Reminder {

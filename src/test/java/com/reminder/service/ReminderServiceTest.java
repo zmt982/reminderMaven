@@ -42,7 +42,6 @@ public class ReminderServiceTest {
     private Page<Reminder> reminders;
     private Page<ReminderDto> expected;
 
-
     @BeforeEach
     void init(TestInfo testInfo) {
         reminderDto = new ReminderDto();
@@ -104,7 +103,7 @@ public class ReminderServiceTest {
     }
 
     @Test
-    void getRemindersByName() {
+    void getRemindersByTitle() {
         when(reminderRepository.findRemindersByTitle(reminderDto.getTitle(), pageable)).thenReturn(reminders);
         when(reminderMapper.toDto(reminders)).thenReturn(expected);
 
